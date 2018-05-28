@@ -1,0 +1,1 @@
+//List of images that form the RHS of the artist's list element

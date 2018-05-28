@@ -1,0 +1,1 @@
+//Page an artist will see when he logs in and wants to edit his profile

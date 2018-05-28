@@ -1,0 +1,1 @@
+//Standard IG image wrapper that will appear throughout the site
