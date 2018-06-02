@@ -1,1 +1,0 @@
-//Row in the artist list with all elements shown on wireframe
