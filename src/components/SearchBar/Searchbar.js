@@ -12,16 +12,32 @@ class  Searchbar extends React.Component
         return (
             <Grid stackable columns={3} textAlign='center' stretched verticalAlign = 'middle'>
                 <Grid.Row>
-                    <Grid.Column  floated = 'left' mobile = {0} tablet= {1} computer = {3}>
+                    <Grid.Column mobile = {0} tablet= {1} computer = {3}>
                         <Segment >
                         </Segment>
                     </Grid.Column>
-                    <Grid.Column  floated = 'left' mobile = {16} tablet= {14} computer = {10}>
+                    <Grid.Column mobile = {16} tablet= {14} computer = {10}>
                         <Segment >
                             <ArtistGroupSearch />
+                            <br />
+                            <Grid stackable columns={2} textAlign='center' stretched verticalAlign = 'middle'>
+                                <Grid.Row>
+                                    <Grid.Column mobile = {16} tablet= {16} computer = {8}>
+                                        <Segment>
+                                            Your list of filters will go here
+                                        </Segment>
+                                    </Grid.Column>
+                                    <Grid.Column mobile = {16} tablet= {16} computer = {8}>
+                                        <Segment>
+                                            {/* Replace this guy with the proper component TagSearch */}
+                                            <ArtistGroupSearch />
+                                        </Segment>
+                                    </Grid.Column>
+                                </Grid.Row>
+                            </Grid>
                         </Segment>
                     </Grid.Column>
-                    <Grid.Column  floated = 'left' mobile = {0} tablet= {1} computer = {3}>
+                    <Grid.Column   mobile = {0} tablet= {1} computer = {3}>
                         <Segment >
                         </Segment>
                     </Grid.Column>

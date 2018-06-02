@@ -63,7 +63,7 @@ export default class ArtistGroupSearch extends Component {
           <Search
             category
             fluid
-            input = {{fluid: true}}
+            input = {{fluid: true, placeholder: "Enter Artist or Studio name..."}}
             loading={isLoading}
             onResultSelect={this.handleResultSelect}
             onSearchChange={_.debounce(this.handleSearchChange, 500, { leading: true })}
