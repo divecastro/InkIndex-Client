@@ -4,6 +4,7 @@ import './App.css';
 import { Button, Grid, GridRow } from 'semantic-ui-react';
 import Header from './components/Header'
 import Searchbar from './components/SearchBar/Searchbar';
+import ArtistList from './components/ArtistList/Artistlist';
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
 
             <br />
             <p>Table List</p>
+            <ArtistList />
             <br />
 
         </div>

@@ -12,7 +12,7 @@ class  Searchbar extends React.Component
         return (
             <Grid stackable columns={3} textAlign='center' stretched verticalAlign = 'middle'>
                 <Grid.Row>
-                    <Grid.Column mobile = {0} tablet= {1} computer = {3}>
+                    <Grid.Column  tablet= {1} computer = {3}>
                         <Segment >
                         </Segment>
                     </Grid.Column>
@@ -37,7 +37,7 @@ class  Searchbar extends React.Component
                             </Grid>
                         </Segment>
                     </Grid.Column>
-                    <Grid.Column   mobile = {0} tablet= {1} computer = {3}>
+                    <Grid.Column  tablet= {1} computer = {3}>
                         <Segment >
                         </Segment>
                     </Grid.Column>

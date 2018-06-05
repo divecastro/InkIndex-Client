@@ -7,7 +7,7 @@ class Header extends React.Component
 {
 
     renderLogin() {
-        let button=<Button onClick={()=>{alert("Logging popup")}}>Log In</Button>;
+        let button=<Button onClick={()=>{alert("Log in popup")}}>Log In</Button>;
         if(this.props.username !== undefined) {
             button = <Button onClick={()=>{alert(`Take ${this.props.username} to profile`)}}>My Profile</Button>
         } 
@@ -32,7 +32,7 @@ class Header extends React.Component
                         <Segment  >
                             <Button.Group>
                                 {this.renderLogin()}
-                                <Button animated='vertical'  color= "blue">
+                                <Button animated='vertical'  color= "blue" onClick={() => {alert('Help/About page')}}>
                                     <Button.Content hidden>
                                         Help
                                     </Button.Content>
