@@ -12,6 +12,7 @@ class ArtistList extends React.Component
         return;
     }
 
+    //Refactor required.
     render() {
         return (
             <div>
