@@ -20,14 +20,10 @@ class ArtistList extends React.Component
                         <Grid.Column only="computer" computer = {1}>
                             <Segment />
                         </Grid.Column>
-                        <Grid.Column mobile = {16} tablet= {16} computer = {16}>
+                        <Grid.Column mobile = {16} tablet= {16} computer = {14}>
                         <ArtistRow />
                         <ArtistRow />
                         <ArtistRow />
-                        <table className="ui celled table">
-                                <tbody>
-                                </tbody>
-                            </table>
                         </Grid.Column>
                         <Grid.Column only="computer" computer = {1}>
                             <Segment />

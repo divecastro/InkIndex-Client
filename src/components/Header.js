@@ -7,9 +7,15 @@ class Header extends React.Component
 {
 
     renderLogin() {
-        let button=<Button onClick={()=>{alert("Log in popup")}}>Log In</Button>;
+        let button=<Button secondary onClick={()=>{alert("Log in popup")}}>
+                        <Icon name="user" inverted color="white" size="large"/>
+                        Log In
+                    </Button>;
         if(this.props.username !== undefined) {
-            button = <Button onClick={()=>{alert(`Take ${this.props.username} to profile`)}}>My Profile</Button>
+            button = <Button secondary onClick={()=>{alert(`Take ${this.props.username} to profile`)}}>
+                        <Icon name="user" inverted color="white" size="large"/>
+                        My Profile
+                    </Button>
         } 
 
         return button;
@@ -18,26 +24,29 @@ class Header extends React.Component
     render() {
         return (
             <div>
+                <Segment>
                  <Grid stackable columns={3} textAlign='center' stretched verticalAlign = 'middle'>
                     <Grid.Row  >
                     <Grid.Column  floated = 'left' mobile = {16} tablet= {8} computer = {3}>
-                        <Segment >
-                            <img src={logo} className="App-logo" alt="logo" onClick = {() => {alert("Take user to idx page")}}/>
+                        <Segment basic>
+                            <Icon name="compass" className="App-logo" size="huge" onClick = {() => {alert("Take user to idx page")}}/>
                         </Segment>
                     </Grid.Column>
                     <Grid.Column only="computer"  computer = {10}>
-                        <Segment >INK INDEX </Segment>
+                        <Segment basic>
+                            <h1>INK INDEX</h1> 
+                        </Segment>
                     </Grid.Column>
                     <Grid.Column   floated='right' mobile = {16} tablet= {8} computer = {3}>
-                        <Segment  >
+                        <Segment  basic>
                             <Button.Group>
                                 {this.renderLogin()}
-                                <Button animated='vertical'  color= "blue" onClick={() => {alert('Help/About page')}}>
+                                <Button animated='vertical'  basic color="black" onClick={() => {alert('Help/About page')}}>
                                     <Button.Content hidden>
                                         Help
                                     </Button.Content>
                                     <Button.Content visible>
-                                        <Icon name='help' />
+                                        <Icon name='help' size="large"/>
                                     </Button.Content>
                                 </Button>
                             </Button.Group>
@@ -45,6 +54,7 @@ class Header extends React.Component
                     </Grid.Column >
                     </Grid.Row>
                 </Grid>
+                </Segment>
             </div>
         );
     }

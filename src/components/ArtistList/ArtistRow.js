@@ -44,13 +44,13 @@ class ArtistRow extends React.Component
                 <Dimmer  active={active}  content={content} onClick= {()=>{/*alert("taking user to page")*/}}/>
                     <Grid stackable columns={3} textAlign='center' stretched verticalAlign = 'middle'>
                     <Grid.Row  >
-                    <Grid.Column  mobile = {16} tablet= {8} computer = {2}>
+                    <Grid.Column  mobile = {16} tablet= {6} computer = {2}>
                         <Segment basic>
                             <Icon name="heart" size="huge" onClick = {() => {alert("Take user to idx page")}}/>
                         </Segment>
                     </Grid.Column>
-                    <Grid.Column only="computer"  computer = {4}>
-                        <Grid>
+                    <Grid.Column   mobile = {16} tablet= {10}  computer = {4}>
+                        <Grid centered>
                             <Grid.Row>
                                 <h1>Jimmy Bobberson</h1>
                             </Grid.Row>
@@ -62,7 +62,7 @@ class ArtistRow extends React.Component
                             </Grid.Row>
                         </Grid>
                     </Grid.Column>
-                    <Grid.Column   floated='right' mobile = {16} tablet= {8} computer = {10}>
+                    <Grid.Column   floated='right' mobile = {16} tablet= {16} computer = {10}>
                         <Segment >
                             <Image.Group size="small">
                                 <Image  src={ex_image} rounded bordered/>
