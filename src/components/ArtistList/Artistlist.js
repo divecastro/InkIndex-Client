@@ -17,17 +17,17 @@ class ArtistList extends React.Component
             <div>
                 <Grid columns={3} textAlign='center' stretched verticalAlign = 'middle'>
                     <Grid.Row>
-                        <Grid.Column only="computer" computer = {1}>
+                        {/* <Grid.Column only="computer" computer = {1}>
                             <Segment />
-                        </Grid.Column>
-                        <Grid.Column mobile = {16} tablet= {16} computer = {14}>
+                        </Grid.Column> */}
+                        <Grid.Column mobile = {16} tablet= {16} computer = {16}>
                         <ArtistRow />
                         <ArtistRow />
                         <ArtistRow />
                         </Grid.Column>
-                        <Grid.Column only="computer" computer = {1}>
+                        {/* <Grid.Column only="computer" computer = {1}>
                             <Segment />
-                        </Grid.Column>
+                        </Grid.Column> */}
                     </Grid.Row>
                 
                 </Grid>
