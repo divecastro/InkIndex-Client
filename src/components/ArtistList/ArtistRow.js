@@ -3,7 +3,9 @@
 //REVEAL COMPONENT is what you need 
 
 import React from 'react';
-import {Dimmer, Segment, Grid, Button, Icon, Header} from 'semantic-ui-react';
+import {Dimmer, Segment, Grid, Button, Icon, Header, Image} from 'semantic-ui-react';
+
+import ex_image from './square-image.png';
 
 class ArtistRow extends React.Component 
 {
@@ -33,33 +35,41 @@ class ArtistRow extends React.Component
           )
         
         const active = this.state.active;
-
+        //TODO URGENT: Move favouriting OUT of dimmer. We want users to be able to quick favourite
         return (
-            <Dimmer.Dimmable as={Segment} dimmed={active} 
-                        onMouseEnter={this.handleEntry} onMouseLeave={this.handleLeave}>
+            <Dimmer.Dimmable as={Segment} 
+                            dimmed={active} 
+                            onMouseEnter={this.handleEntry} 
+                            onMouseLeave={this.handleLeave}>
                 <Dimmer  active={active}  content={content} onClick= {()=>{/*alert("taking user to page")*/}}/>
-                <Grid stackable columns={3} textAlign='center' stretched verticalAlign = 'middle'>
+                    <Grid stackable columns={3} textAlign='center' stretched verticalAlign = 'middle'>
                     <Grid.Row  >
-                    <Grid.Column  floated = 'left' mobile = {16} tablet= {8} computer = {3}>
-                        <Segment >
-                            <img  className="App-logo" alt="logo" onClick = {() => {alert("Take user to idx page")}}/>
+                    <Grid.Column  mobile = {16} tablet= {8} computer = {2}>
+                        <Segment basic>
+                            <Icon name="heart" size="huge" onClick = {() => {alert("Take user to idx page")}}/>
                         </Segment>
                     </Grid.Column>
-                    <Grid.Column only="computer"  computer = {10}>
-                        <Segment >Artist Maximus d00d </Segment>
+                    <Grid.Column only="computer"  computer = {4}>
+                        <Grid>
+                            <Grid.Row>
+                                <h1>Jimmy Bobberson</h1>
+                            </Grid.Row>
+                            <Grid.Row>
+                                <h2>Cool Bro Tattoo Studio</h2>
+                            </Grid.Row>
+                            <Grid.Row>
+                                <h3>Coolstown, Metro City</h3>
+                            </Grid.Row>
+                        </Grid>
                     </Grid.Column>
-                    <Grid.Column   floated='right' mobile = {16} tablet= {8} computer = {3}>
-                        <Segment  >
-                            <Button.Group>
-                                <Button animated='vertical'  color= "blue" onClick={() => {alert('Help/About page')}}>
-                                    <Button.Content hidden>
-                                        Help
-                                    </Button.Content>
-                                    <Button.Content visible>
-                                        <Icon name='help' />
-                                    </Button.Content>
-                                </Button>
-                            </Button.Group>
+                    <Grid.Column   floated='right' mobile = {16} tablet= {8} computer = {10}>
+                        <Segment >
+                            <Image.Group size="small">
+                                <Image  src={ex_image} rounded bordered/>
+                                <Image  src={ex_image} rounded bordered/>
+                                <Image  src={ex_image} rounded bordered/>
+                                <Image  src={ex_image} rounded bordered/>
+                            </Image.Group>
                         </Segment>
                     </Grid.Column >
                     </Grid.Row>
