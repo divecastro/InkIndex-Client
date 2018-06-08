@@ -17,12 +17,10 @@ class App extends Component {
 
             <p>Here manifests our hopes and dreams for EDC2019.</p>
 
-              <p>Search bar</p>
               <Searchbar />
 
 
             <br />
-            <p>Table List</p>
             <ArtistList />
             <br />
 
