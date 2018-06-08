@@ -3,14 +3,12 @@
 import React from 'react';
 import { Button, Grid, Segment, Icon } from 'semantic-ui-react';
 import logo from '../logo.svg'
+import Modal_LogIn from './Modal_LogIn';
 class Header extends React.Component 
 {
 
     renderLogin() {
-        let button=<Button secondary onClick={()=>{alert("Log in popup")}}>
-                        <Icon name="user" inverted color="white" size="large"/>
-                        Log In
-                    </Button>;
+        let button=<Modal_LogIn />
         if(this.props.username !== undefined) {
             button = <Button secondary onClick={()=>{alert(`Take ${this.props.username} to profile`)}}>
                         <Icon name="user" inverted color="white" size="large"/>
